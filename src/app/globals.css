@@ -1,0 +1,76 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-slate-800 antialiased;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  /* Glass card surface used across the app */
+  .glass {
+    @apply rounded-3xl border border-white/20 bg-white/95 shadow-glass backdrop-blur-md;
+  }
+
+  .container-app {
+    @apply mx-auto w-full max-w-6xl px-4 py-6 sm:px-6;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Buttons */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-50 disabled:hover:translate-y-0;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  }
+  .btn-accent {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  .btn-secondary {
+    background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+  }
+  .btn-danger {
+    background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  }
+  .btn-success {
+    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+  }
+  .btn-sm {
+    @apply rounded-lg px-3 py-1.5 text-xs;
+  }
+
+  /* Form controls */
+  .label {
+    @apply mb-2 flex items-center gap-2 text-sm font-semibold text-slate-700;
+  }
+  .input {
+    @apply w-full rounded-xl border-2 border-slate-200 bg-white px-4 py-3 text-base transition-all duration-300 focus:-translate-y-0.5 focus:border-brand-start focus:outline-none focus:ring-4 focus:ring-brand-start/10;
+  }
+
+  /* Alerts */
+  .alert {
+    @apply mb-6 flex items-start gap-2 rounded-xl px-5 py-4 font-medium text-white;
+  }
+  .alert-success {
+    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+  }
+  .alert-error {
+    background: linear-gradient(135deg, #ff7675 0%, #e17055 100%);
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 rounded-full px-3 py-1 text-xs font-semibold text-white;
+  }
+}

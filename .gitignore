@@ -1,0 +1,31 @@
+# Dependencies
+/node_modules
+
+# Next.js build output
+/.next
+/out
+next-env.d.ts
+
+# Netlify
+.netlify
+
+# Environment files (never commit secrets)
+.env
+.env*.local
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# TypeScript build info
+*.tsbuildinfo
+
+# Local Claude Code settings
+.claude/

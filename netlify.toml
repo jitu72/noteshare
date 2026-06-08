@@ -1,0 +1,15 @@
+# Netlify configuration for the Next.js collaborative note app.
+# The official @netlify/plugin-nextjs adapter handles App Router,
+# server components, server actions, and route handlers (as functions).
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[functions]
+  # File uploads go through Cloudinary, but allow a roomy body for
+  # multipart form submissions handled by server actions.
+  node_bundler = "esbuild"
