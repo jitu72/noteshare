@@ -6,6 +6,15 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  # MONGODB_DB ("note_app") and the Cloudinary cloud name / API key are not secrets:
+  # the DB name is a plain identifier and the Cloudinary public values are used in
+  # client-side upload requests. Exclude them from Netlify's secret scanner so a
+  # non-secret value appearing in repo/build output doesn't fail the build.
+  # The real secrets (MONGODB_URI, AUTH_SECRET, CLOUDINARY_API_SECRET) are NOT listed
+  # here and remain scanned.
+  SECRETS_SCAN_OMIT_KEYS = "MONGODB_DB,CLOUDINARY_CLOUD_NAME,CLOUDINARY_API_KEY"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
