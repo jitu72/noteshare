@@ -1,7 +1,6 @@
 # Collaborative Note App (Next.js + MongoDB)
 
-A full-featured, multi-user collaborative note-taking app. Originally built in PHP/MySQL,
-now rewritten with **Next.js (App Router)**, **MongoDB**, **Cloudinary** for file storage,
+A full-featured, multi-user collaborative note-taking app. Built with **Next.js (App Router)**, **MongoDB**, **Cloudinary** for file storage,
 and deployable to **Netlify**.
 
 ## ✨ Features
